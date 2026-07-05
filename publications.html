@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+:root{--navy:#0a1628;--teal:#0f6e56;--teal-light:#e1f5ee;--teal-mid:#1d9e75;--blue:#185fa5;--blue-light:#e6f1fb;--coral:#d85a30;--purple-light:#eeedfe;--purple:#534ab7;--amber-light:#faeeda;--amber:#854f0b;--bg:#fafaf8;--surface:#fff;--text:#1a1a1a;--text-secondary:#4b5563;--text-muted:#9ca3af;--border:#e5e7eb;--font-display:'Source Serif 4',Georgia,serif;--font-body:'Inter',-apple-system,sans-serif;--max-width:960px;--nav-height:64px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}a{color:var(--teal);text-decoration:none;transition:color .2s}a:hover{color:var(--teal-mid)}img{max-width:100%;display:block}.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-height);background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:100;display:flex;align-items:center;justify-content:center}.nav-inner{width:100%;max-width:var(--max-width);padding:0 24px;display:flex;align-items:center;justify-content:space-between}.nav-name{font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--navy);letter-spacing:-.01em}.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{color:var(--text-secondary);font-size:14px;font-weight:500;position:relative;padding:4px 0}.nav-links a:hover,.nav-links a.active{color:var(--teal)}.nav-links a.active::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--teal);border-radius:1px}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}.hamburger span{display:block;width:20px;height:2px;background:var(--text);margin:5px 0;transition:.3s;border-radius:1px}.hero{padding-top:calc(var(--nav-height) + 60px);padding-bottom:60px;position:relative;overflow:hidden}.hero-bg{position:absolute;top:0;left:0;right:0;bottom:0;opacity:.04;pointer-events:none}.hero-inner{max-width:var(--max-width);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 260px;gap:48px;align-items:start;position:relative}.hero-text h1{font-family:var(--font-display);font-size:36px;font-weight:600;color:var(--navy);margin-bottom:6px;letter-spacing:-.02em;line-height:1.2}.hero-subtitle{font-size:16px;color:var(--text-secondary);margin-bottom:6px}.hero-affiliation{font-size:13px;color:var(--text-muted);margin-bottom:28px;display:flex;align-items:center;gap:6px}.hero-affiliation svg{width:14px;height:14px;flex-shrink:0}.hero-bio{font-size:15px;line-height:1.75;color:var(--text);margin-bottom:28px}.hero-bio p{margin-bottom:14px}.hero-bio p:last-child{margin-bottom:0}.social-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.social-links a{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-secondary);padding:6px 14px;border:1px solid var(--border);border-radius:20px;transition:all .2s}.social-links a:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-light)}.social-links a svg{width:16px;height:16px}.hero-photo{display:flex;flex-direction:column;align-items:center;gap:12px}.photo-frame{width:220px;height:270px;border-radius:16px;overflow:hidden;border:3px solid var(--border);background:linear-gradient(145deg,var(--navy) 0%,var(--teal) 100%);display:flex;align-items:center;justify-content:center;position:relative}.photo-frame img{width:100%;height:100%;object-fit:cover}.photo-placeholder{color:rgba(255,255,255,.4);font-size:13px;text-align:center;padding:20px}.photo-placeholder svg{width:60px;height:60px;margin:0 auto 8px;opacity:.5}.interests{max-width:var(--max-width);margin:0 auto 60px;padding:0 24px}.interests-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:14px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:13px;padding:6px 16px;border-radius:20px;font-weight:500}.tag-teal{background:var(--teal-light);color:var(--teal)}.tag-blue{background:var(--blue-light);color:var(--blue)}.tag-purple{background:var(--purple-light);color:var(--purple)}.tag-amber{background:var(--amber-light);color:var(--amber)}.highlights{max-width:var(--max-width);margin:0 auto 60px;padding:0 24px}.highlights h2{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--navy);margin-bottom:20px}.highlight-list{list-style:none}.highlight-list li{padding:14px 0;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:baseline;font-size:14px;line-height:1.6}.highlight-list li:last-child{border-bottom:none}.highlight-date{font-size:12px;color:var(--text-muted);white-space:nowrap;min-width:70px}.page-header{padding-top:calc(var(--nav-height) + 48px);padding-bottom:40px;max-width:var(--max-width);margin:0 auto;padding-left:24px;padding-right:24px}.page-header h1{font-family:var(--font-display);font-size:32px;font-weight:600;color:var(--navy);margin-bottom:8px}.page-header p{color:var(--text-secondary);font-size:15px}.section{max-width:var(--max-width);margin:0 auto 48px;padding:0 24px}.section-title{font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--navy);margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--teal-light)}.project-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}.project-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:transform .2s,box-shadow .2s}.project-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.06)}.project-thumb{height:140px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.project-thumb svg{width:40px;height:40px;opacity:.5;color:#fff}.project-body{padding:20px}.project-body h3{font-size:16px;font-weight:600;margin-bottom:8px;color:var(--navy);line-height:1.3}.project-body p{font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:14px}.project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}.project-tags span{font-size:11px;padding:3px 10px;background:var(--bg);color:var(--text-muted);border-radius:12px;border:1px solid var(--border)}.project-link{font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px}.project-link svg{width:14px;height:14px}.pub-group{margin-bottom:36px}.pub-group h3{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--teal);margin-bottom:16px}.pub-item{padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:12px;transition:border-color .2s}.pub-item:hover{border-color:var(--teal-mid)}.pub-title{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:6px;line-height:1.4}.pub-authors{font-size:13px;color:var(--text-secondary);margin-bottom:4px}.pub-venue{font-size:13px;color:var(--text-muted);font-style:italic}.pub-meta{display:flex;align-items:center;gap:12px;margin-top:10px}.pub-badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px}.badge-published{background:var(--teal-light);color:var(--teal)}.badge-review{background:var(--amber-light);color:var(--amber)}.cv-actions{display:flex;gap:12px;margin-bottom:36px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border-radius:8px;font-size:14px;font-weight:500;border:none;cursor:pointer;transition:all .2s;text-decoration:none}.btn-primary{background:var(--teal);color:#fff}.btn-primary:hover{background:var(--teal-mid);color:#fff}.btn-outline{background:transparent;color:var(--text-secondary);border:1px solid var(--border)}.btn-outline:hover{border-color:var(--teal);color:var(--teal)}.btn svg{width:16px;height:16px}.cv-section{margin-bottom:36px}.cv-section h3{font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--navy);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)}.cv-entry{margin-bottom:20px;padding-left:16px;border-left:2px solid var(--teal-light)}.cv-entry-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:4px}.cv-entry h4{font-size:15px;font-weight:600;color:var(--text)}.cv-entry .date{font-size:13px;color:var(--text-muted);white-space:nowrap}.cv-entry .subtitle{font-size:13px;color:var(--text-secondary);font-style:italic;margin-bottom:6px}.cv-entry p{font-size:14px;color:var(--text-secondary);line-height:1.6}.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.skill-group h4{font-size:13px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}.skill-group p{font-size:14px;color:var(--text-secondary);line-height:1.6}.footer{border-top:1px solid var(--border);padding:28px 24px;text-align:center;margin-top:60px}.footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}.footer p{font-size:12px;color:var(--text-muted)}.footer-links{display:flex;gap:16px}.footer-links a{color:var(--text-muted);font-size:12px}.footer-links a:hover{color:var(--teal)}@media(max-width:768px){.hero-inner{grid-template-columns:1fr;gap:32px}.hero-photo{order:-1}.photo-frame{width:160px;height:200px}.hero-text h1{font-size:28px}.nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:#fff;flex-direction:column;padding:16px 24px;gap:0;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.06)}.nav-links.open{display:flex}.nav-links a{padding:12px 0;border-bottom:1px solid var(--border)}.nav-links a:last-child{border-bottom:none}.nav-links a.active::after{display:none}.hamburger{display:block}.project-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr}.footer-inner{justify-content:center;text-align:center}.page-header h1{font-size:26px}}@media(max-width:480px){.social-links a span{display:none}}
+  </style>
+  <title>Publications | Amirhossien Mahmoudnia</title>
+  <meta name="description" content="Publications by Amirhossien Mahmoudnia — GeoAI, remote sensing, and spatial optimization.">
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <a href="index.html" class="nav-name">A. Mahmoudnia</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div></nav>
+
+  <div class="page-header">
+    <h1>Publications</h1>
+    <p>Peer-reviewed conference papers and journal articles. See also my <a href="https://scholar.google.com/citations?hl=en&user=9_AuQSsAAAAJ" target="_blank">Google Scholar</a> profile.</p>
+  </div>
+
+  <div class="section">
+    <div class="pub-group">
+      <h3>Conference presentations</h3>
+      <div class="pub-item">
+        <div class="pub-title">GeoAI Framework for Evaluation of Deep Learning Models in Water Body Segmentation</div>
+        <div class="pub-authors"><strong>Mahmoudnia, A.</strong>, et al.</div>
+        <div class="pub-venue">ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences</div>
+        <div class="pub-meta"><span class="pub-badge badge-published">Published · Dec 2025</span></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">Detecting Marsh-to-Open-Water Transitions Using Dual-Date Sentinel-2 and DeepLabV3</div>
+        <div class="pub-authors"><strong>Mahmoudnia, A.</strong>, et al.</div>
+        <div class="pub-venue">ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences</div>
+        <div class="pub-meta"><span class="pub-badge badge-published">Published · Dec 2025</span></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">GIS-Based Optimization of Humanitarian Aids Logistics in Earthquake-Affected Urban Areas</div>
+        <div class="pub-authors"><strong>Mahmoudnia, A.</strong>, et al.</div>
+        <div class="pub-venue">ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences</div>
+        <div class="pub-meta"><span class="pub-badge badge-published">Published · Dec 2025</span></div>
+      </div>
+    </div>
+
+    <div class="pub-group">
+      <h3>Journal articles (under review)</h3>
+      <div class="pub-item">
+        <div class="pub-title">Deep Learning Mapping of Wetland Dynamics: A User-Friendly Web-Based Decision Support Tool for Chesapeake Bay</div>
+        <div class="pub-authors"><strong>Mahmoudnia, A.</strong>, et al.</div>
+        <div class="pub-venue">International Journal of River Basin Management (Taylor &amp; Francis)</div>
+        <div class="pub-meta"><span class="pub-badge badge-review">Under review · 2026</span></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">Frugal GeoAI: Matching Computational Method to Spatial Need</div>
+        <div class="pub-authors"><strong>Mahmoudnia, A.</strong>, et al.</div>
+        <div class="pub-venue">Cartography and Geographic Information Science (Taylor &amp; Francis)</div>
+        <div class="pub-meta"><span class="pub-badge badge-review">Under review · 2026</span></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">An Uncertainty-Aware Explainable AI Framework for Landslide Susceptibility Mapping Using Dempster-Shafer Evidence Fusion</div>
+        <div class="pub-authors"><strong>Mahmoudnia, A.</strong>, et al.</div>
+        <div class="pub-venue">Stochastic Environmental Research and Risk Assessment (Springer)</div>
+        <div class="pub-meta"><span class="pub-badge badge-review">Under review · 2026</span></div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">Spatial Optimization of Post-Earthquake Aid Delivery: A Hybrid Genetic Algorithm with Local Search and Clustering Strategy</div>
+        <div class="pub-authors"><strong>Mahmoudnia, A.</strong>, et al.</div>
+        <div class="pub-venue">Transportmetrica A: Transport Science (Taylor &amp; Francis)</div>
+        <div class="pub-meta"><span class="pub-badge badge-review">Under review · 2026</span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="footer-inner">
+    <p>&copy; 2026 Amirhossien Mahmoudnia</p>
+    <div class="footer-links">
+      <a href="mailto:amirh.mahmoudnia@gmail.com">amirh.mahmoudnia@gmail.com</a>
+      <a href="https://github.com/amirtistein" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/amir-hosieen-mahmoudnia" target="_blank">LinkedIn</a>
+    </div>
+  </div></footer>
+  <script>
+document.addEventListener('DOMContentLoaded',function(){var h=document.querySelector('.hamburger'),n=document.querySelector('.nav-links');if(h){h.addEventListener('click',function(){n.classList.toggle('open');var b=h.querySelectorAll('span');h.classList.toggle('active');if(h.classList.contains('active')){b[0].style.transform='rotate(45deg) translate(5px,5px)';b[1].style.opacity='0';b[2].style.transform='rotate(-45deg) translate(5px,-5px)'}else{b[0].style.transform='';b[1].style.opacity='';b[2].style.transform=''}})}document.querySelectorAll('.nav-links a').forEach(function(l){l.addEventListener('click',function(){n.classList.remove('open');if(h){h.classList.remove('active');var b=h.querySelectorAll('span');b[0].style.transform='';b[1].style.opacity='';b[2].style.transform=''}})});var nav=document.querySelector('.nav');window.addEventListener('scroll',function(){nav.style.boxShadow=window.scrollY>10?'0 1px 8px rgba(0,0,0,.06)':'none'})});
+</script>
+</body>
+</html>

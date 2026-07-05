@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+:root{--navy:#0a1628;--teal:#0f6e56;--teal-light:#e1f5ee;--teal-mid:#1d9e75;--blue:#185fa5;--blue-light:#e6f1fb;--coral:#d85a30;--purple-light:#eeedfe;--purple:#534ab7;--amber-light:#faeeda;--amber:#854f0b;--bg:#fafaf8;--surface:#fff;--text:#1a1a1a;--text-secondary:#4b5563;--text-muted:#9ca3af;--border:#e5e7eb;--font-display:'Source Serif 4',Georgia,serif;--font-body:'Inter',-apple-system,sans-serif;--max-width:960px;--nav-height:64px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}a{color:var(--teal);text-decoration:none;transition:color .2s}a:hover{color:var(--teal-mid)}img{max-width:100%;display:block}.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-height);background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:100;display:flex;align-items:center;justify-content:center}.nav-inner{width:100%;max-width:var(--max-width);padding:0 24px;display:flex;align-items:center;justify-content:space-between}.nav-name{font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--navy);letter-spacing:-.01em}.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{color:var(--text-secondary);font-size:14px;font-weight:500;position:relative;padding:4px 0}.nav-links a:hover,.nav-links a.active{color:var(--teal)}.nav-links a.active::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--teal);border-radius:1px}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}.hamburger span{display:block;width:20px;height:2px;background:var(--text);margin:5px 0;transition:.3s;border-radius:1px}.hero{padding-top:calc(var(--nav-height) + 60px);padding-bottom:60px;position:relative;overflow:hidden}.hero-bg{position:absolute;top:0;left:0;right:0;bottom:0;opacity:.04;pointer-events:none}.hero-inner{max-width:var(--max-width);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 260px;gap:48px;align-items:start;position:relative}.hero-text h1{font-family:var(--font-display);font-size:36px;font-weight:600;color:var(--navy);margin-bottom:6px;letter-spacing:-.02em;line-height:1.2}.hero-subtitle{font-size:16px;color:var(--text-secondary);margin-bottom:6px}.hero-affiliation{font-size:13px;color:var(--text-muted);margin-bottom:28px;display:flex;align-items:center;gap:6px}.hero-affiliation svg{width:14px;height:14px;flex-shrink:0}.hero-bio{font-size:15px;line-height:1.75;color:var(--text);margin-bottom:28px}.hero-bio p{margin-bottom:14px}.hero-bio p:last-child{margin-bottom:0}.social-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.social-links a{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-secondary);padding:6px 14px;border:1px solid var(--border);border-radius:20px;transition:all .2s}.social-links a:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-light)}.social-links a svg{width:16px;height:16px}.hero-photo{display:flex;flex-direction:column;align-items:center;gap:12px}.photo-frame{width:220px;height:270px;border-radius:16px;overflow:hidden;border:3px solid var(--border);background:linear-gradient(145deg,var(--navy) 0%,var(--teal) 100%);display:flex;align-items:center;justify-content:center;position:relative}.photo-frame img{width:100%;height:100%;object-fit:cover}.photo-placeholder{color:rgba(255,255,255,.4);font-size:13px;text-align:center;padding:20px}.photo-placeholder svg{width:60px;height:60px;margin:0 auto 8px;opacity:.5}.interests{max-width:var(--max-width);margin:0 auto 60px;padding:0 24px}.interests-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:14px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:13px;padding:6px 16px;border-radius:20px;font-weight:500}.tag-teal{background:var(--teal-light);color:var(--teal)}.tag-blue{background:var(--blue-light);color:var(--blue)}.tag-purple{background:var(--purple-light);color:var(--purple)}.tag-amber{background:var(--amber-light);color:var(--amber)}.highlights{max-width:var(--max-width);margin:0 auto 60px;padding:0 24px}.highlights h2{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--navy);margin-bottom:20px}.highlight-list{list-style:none}.highlight-list li{padding:14px 0;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:baseline;font-size:14px;line-height:1.6}.highlight-list li:last-child{border-bottom:none}.highlight-date{font-size:12px;color:var(--text-muted);white-space:nowrap;min-width:70px}.page-header{padding-top:calc(var(--nav-height) + 48px);padding-bottom:40px;max-width:var(--max-width);margin:0 auto;padding-left:24px;padding-right:24px}.page-header h1{font-family:var(--font-display);font-size:32px;font-weight:600;color:var(--navy);margin-bottom:8px}.page-header p{color:var(--text-secondary);font-size:15px}.section{max-width:var(--max-width);margin:0 auto 48px;padding:0 24px}.section-title{font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--navy);margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--teal-light)}.project-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}.project-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:transform .2s,box-shadow .2s}.project-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.06)}.project-thumb{height:140px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.project-thumb svg{width:40px;height:40px;opacity:.5;color:#fff}.project-body{padding:20px}.project-body h3{font-size:16px;font-weight:600;margin-bottom:8px;color:var(--navy);line-height:1.3}.project-body p{font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:14px}.project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}.project-tags span{font-size:11px;padding:3px 10px;background:var(--bg);color:var(--text-muted);border-radius:12px;border:1px solid var(--border)}.project-link{font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px}.project-link svg{width:14px;height:14px}.pub-group{margin-bottom:36px}.pub-group h3{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--teal);margin-bottom:16px}.pub-item{padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:12px;transition:border-color .2s}.pub-item:hover{border-color:var(--teal-mid)}.pub-title{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:6px;line-height:1.4}.pub-authors{font-size:13px;color:var(--text-secondary);margin-bottom:4px}.pub-venue{font-size:13px;color:var(--text-muted);font-style:italic}.pub-meta{display:flex;align-items:center;gap:12px;margin-top:10px}.pub-badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px}.badge-published{background:var(--teal-light);color:var(--teal)}.badge-review{background:var(--amber-light);color:var(--amber)}.cv-actions{display:flex;gap:12px;margin-bottom:36px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border-radius:8px;font-size:14px;font-weight:500;border:none;cursor:pointer;transition:all .2s;text-decoration:none}.btn-primary{background:var(--teal);color:#fff}.btn-primary:hover{background:var(--teal-mid);color:#fff}.btn-outline{background:transparent;color:var(--text-secondary);border:1px solid var(--border)}.btn-outline:hover{border-color:var(--teal);color:var(--teal)}.btn svg{width:16px;height:16px}.cv-section{margin-bottom:36px}.cv-section h3{font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--navy);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)}.cv-entry{margin-bottom:20px;padding-left:16px;border-left:2px solid var(--teal-light)}.cv-entry-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:4px}.cv-entry h4{font-size:15px;font-weight:600;color:var(--text)}.cv-entry .date{font-size:13px;color:var(--text-muted);white-space:nowrap}.cv-entry .subtitle{font-size:13px;color:var(--text-secondary);font-style:italic;margin-bottom:6px}.cv-entry p{font-size:14px;color:var(--text-secondary);line-height:1.6}.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.skill-group h4{font-size:13px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}.skill-group p{font-size:14px;color:var(--text-secondary);line-height:1.6}.footer{border-top:1px solid var(--border);padding:28px 24px;text-align:center;margin-top:60px}.footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}.footer p{font-size:12px;color:var(--text-muted)}.footer-links{display:flex;gap:16px}.footer-links a{color:var(--text-muted);font-size:12px}.footer-links a:hover{color:var(--teal)}@media(max-width:768px){.hero-inner{grid-template-columns:1fr;gap:32px}.hero-photo{order:-1}.photo-frame{width:160px;height:200px}.hero-text h1{font-size:28px}.nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:#fff;flex-direction:column;padding:16px 24px;gap:0;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.06)}.nav-links.open{display:flex}.nav-links a{padding:12px 0;border-bottom:1px solid var(--border)}.nav-links a:last-child{border-bottom:none}.nav-links a.active::after{display:none}.hamburger{display:block}.project-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr}.footer-inner{justify-content:center;text-align:center}.page-header h1{font-size:26px}}@media(max-width:480px){.social-links a span{display:none}}
+  </style>
+  <title>Amirhossien Mahmoudnia | GIS &amp; Geospatial AI</title>
+  <meta name="description" content="Amirhossien Mahmoudnia — MSc student in GIS at the University of Tehran. Research in GeoAI, spatial optimization, Remote Sensing, and Environmental Monitoring.">
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <a href="index.html" class="nav-name">A. Mahmoudnia</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div></nav>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%">
+        <g stroke="#0f6e56" fill="none" stroke-width="1.2">
+          <path d="M0 280 Q150 220 300 260 Q450 300 600 240 Q750 180 900 220 Q1050 260 1200 200"/>
+          <path d="M0 320 Q150 260 300 300 Q450 340 600 280 Q750 220 900 260 Q1050 300 1200 240"/>
+          <path d="M0 360 Q150 300 300 340 Q450 380 600 320 Q750 260 900 300 Q1050 340 1200 280"/>
+          <path d="M0 400 Q150 340 300 380 Q450 420 600 360 Q750 300 900 340 Q1050 380 1200 320"/>
+          <path d="M0 240 Q150 180 300 220 Q450 260 600 200 Q750 140 900 180 Q1050 220 1200 160"/>
+          <path d="M0 200 Q150 140 300 180 Q450 220 600 160 Q750 100 900 140 Q1050 180 1200 120"/>
+          <path d="M0 440 Q150 380 300 420 Q450 460 600 400 Q750 340 900 380 Q1050 420 1200 360"/>
+          <ellipse cx="420" cy="280" rx="80" ry="40"/>
+          <ellipse cx="420" cy="280" rx="50" ry="25"/>
+          <ellipse cx="850" cy="220" rx="60" ry="35"/>
+          <ellipse cx="850" cy="220" rx="30" ry="18"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Amirhossien Mahmoudnia</h1>
+        <p class="hero-subtitle">MSc student in GIS &amp; Geospatial Engineering</p>
+        <p class="hero-affiliation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20V8l10-6 10 6v12"/><path d="M6 10v10h4v-6h4v6h4V10"/></svg>
+          University of Tehran · School of Surveying and Geospatial Engineering
+        </p>
+        <div class="hero-bio">
+          <p>I am a master's student in Geographic Information Science at the University of Tehran, where I also completed my BSc in Surveying and Geospatial Engineering. My research sits at the intersection of <strong>GeoAI</strong>, <strong>spatial optimization</strong>, and <strong>environmental monitoring</strong> — using deep learning and geospatial analysis to address real-world problems in disaster response, land cover change, and natural resource management.</p>
+          <p>Outside of research, I am a creative person who enjoys different forms of art and expression. I draw portraits, love story-driven video games with rich character development and immersive narratives, and enjoy watching movies. I have a curious mind that likes to find connections and patterns among seemingly unrelated things — a habit that, I think, also shapes how I approach geospatial problems.</p>
+          <p>I am currently looking for graduate positions where I can pursue my passion for GIScience and GeoAI, learn from and collaborate with researchers and experts in the field, and apply my knowledge and skills to solve real-world problems that make a positive impact. My <a href="cv.html">CV page</a> has more details on my background, and my <a href="projects.html">projects page</a> covers what I have been working on.</p>
+        </div>
+        <div class="social-links">
+          <a href="mailto:amirh.mahmoudnia@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg><span>Email</span></a>
+          <a href="https://github.com/amirtistein" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.17c-3.34.73-4.03-1.41-4.03-1.41-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.14 3 .4c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.19.69.8.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg><span>GitHub</span></a>
+          <a href="https://linkedin.com/in/amir-hosieen-mahmoudnia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>LinkedIn</span></a>
+          <a href="https://scholar.google.com/citations?hl=en&user=9_AuQSsAAAAJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"/></svg><span>Scholar</span></a>
+          <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span>ResearchGate</span></a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <!-- Replace with: <img src="images/profile.jpg" alt="Amirhossien Mahmoudnia"> -->
+          <div class="scol">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Your photo
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="interests">
+    <p class="interests-label">Research interests</p>
+    <div class="tags">
+      <span class="tag tag-teal">GIS &amp; Spatial Analysis</span>
+      <span class="tag tag-blue">Geospatial AI (GeoAI)</span>
+      <span class="tag tag-purple">Deep Learning</span>
+      <span class="tag tag-amber">Spatial Optimization</span>
+      <span class="tag tag-teal">Environmental Monitoring</span>
+      <span class="tag tag-blue">WebGIS Development</span>
+    </div>
+  </div>
+
+  <div class="highlights">
+    <h2>Recent highlights</h2>
+    <ul class="highlight-list">
+      <li><span class="highlight-date">2026</span><span>Four journal papers under review at Taylor &amp; Francis and Springer journals, covering wetland dynamics, frugal GeoAI, landslide susceptibility mapping, and post-earthquake logistics optimization.</span></li>
+      <li><span class="highlight-date">Dec 2025</span><span>Presented three peer-reviewed papers at the 8th ISPRS International Geospatial Conference at the University of Tehran (oral and poster).</span></li>
+      <li><span class="highlight-date">2025</span><span>Developing a Spatial Decision Support System (SDSS) for post-earthquake humanitarian aid logistics as part of MSc thesis research.</span></li>
+    </ul>
+  </div>
+
+  <footer class="footer"><div class="footer-inner">
+    <p>&copy; 2026 Amirhossien Mahmoudnia</p>
+    <div class="footer-links">
+      <a href="mailto:amirh.mahmoudnia@gmail.com">amirh.mahmoudnia@gmail.com</a>
+      <a href="https://github.com/amirtistein" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/amir-hosieen-mahmoudnia" target="_blank">LinkedIn</a>
+    </div>
+  </div></footer>
+  <script>
+document.addEventListener('DOMContentLoaded',function(){var h=document.querySelector('.hamburger'),n=document.querySelector('.nav-links');if(h){h.addEventListener('click',function(){n.classList.toggle('open');var b=h.querySelectorAll('span');h.classList.toggle('active');if(h.classList.contains('active')){b[0].style.transform='rotate(45deg) translate(5px,5px)';b[1].style.opacity='0';b[2].style.transform='rotate(-45deg) translate(5px,-5px)'}else{b[0].style.transform='';b[1].style.opacity='';b[2].style.transform=''}})}document.querySelectorAll('.nav-links a').forEach(function(l){l.addEventListener('click',function(){n.classList.remove('open');if(h){h.classList.remove('active');var b=h.querySelectorAll('span');b[0].style.transform='';b[1].style.opacity='';b[2].style.transform=''}})});var nav=document.querySelector('.nav');window.addEventListener('scroll',function(){nav.style.boxShadow=window.scrollY>10?'0 1px 8px rgba(0,0,0,.06)':'none'})});
+</script>
+</body>
+</html>
