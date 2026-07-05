@@ -99,7 +99,7 @@ img { max-width: 100%; display: block; }
 
 /* ═══ NEW HERO (full-width background image) ═══ */
 .hero { position:relative; min-height:560px; display:flex; align-items:center; overflow:hidden; }
-.hero-bg-image { position:absolute; inset:0; z-index:0; background-image:url('images/hero.png'); background-size:cover; background-position:center right; }
+.hero-bg-image { position:absolute; inset:0; z-index:0; background-image:url('images/hero.png'); background-size:cover; background-position:center right; background-repeat:no-repeat; }
 /* Fallback gradient shows if image missing */
 .hero-bg-fallback { position:absolute; inset:0; z-index:0; background:linear-gradient(165deg,#050d18 0%,#0a1628 30%,#0d2137 55%,#0a2e3e 75%,#082a20 100%); }
 /* Dark overlay so text stays readable over any image */
@@ -118,7 +118,8 @@ img { max-width: 100%; display: block; }
 .btn-hero-ghost:hover { background:rgba(255,255,255,0.16); color:#fff; border-color:rgba(255,255,255,0.4); transform:translateY(-2px); }
 
 /* ═══ WHAT I DO ═══ */
-.whatido { max-width:var(--max-width); margin:0 auto; padding:64px 24px 40px; }
+.whatido { background:var(--band-bg); border-top:1px solid var(--band-border); border-bottom:1px solid var(--band-border); transition:background .3s, border-color .3s; }
+.whatido-inner { max-width:var(--max-width); margin:0 auto; padding:56px 24px; }
 .whatido h2 { font-family:var(--font-display); font-size:26px; font-weight:600; color:var(--text); margin-bottom:6px; position:relative; display:inline-block; }
 .whatido h2::after { content:''; display:block; width:48px; height:3px; background:var(--gradient-accent); border-radius:2px; margin-top:10px; }
 .whatido-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:36px; }
@@ -138,7 +139,8 @@ img { max-width: 100%; display: block; }
 .wi-icon-blue { background:linear-gradient(135deg,#185fa5,#3b9eff); } .wi-card.c-blue { --wi-accent:linear-gradient(90deg,#185fa5,#3b9eff); }
 
 /* ═══ ABOUT ME ═══ */
-.about { max-width:var(--max-width); margin:0 auto; padding:40px 24px 20px; }
+.about { background:var(--bg); transition:background .3s; }
+.about-wrap { max-width:var(--max-width); margin:0 auto; padding:64px 24px 40px; }
 .about h2 { font-family:var(--font-display); font-size:26px; font-weight:600; color:var(--text); margin-bottom:6px; position:relative; display:inline-block; }
 .about h2::after { content:''; display:block; width:48px; height:3px; background:var(--gradient-accent); border-radius:2px; margin-top:10px; }
 .about-inner { display:grid; grid-template-columns:280px 1fr; gap:44px; margin-top:36px; align-items:start; }
@@ -295,7 +297,7 @@ img { max-width: 100%; display: block; }
         <p class="hero-greeting">Hi, I'm</p>
         <h1>Amirhossien Mahmoudnia</h1>
         <p class="hero-roles">Master's Student in GIS<span class="sep">|</span>GeoAI Researcher</p>
-        <p class="hero-tagline">I leverage Geospatial data, machine learning, and AI to understand and solve real-world challenges. My work sits at the intersection of GIScience and Artificial Intelligence.</p>
+        <p class="hero-tagline">I leverage geospatial data, machine learning, and AI to understand and solve real-world challenges. My work sits at the intersection of GIScience and Artificial Intelligence.</p>
         <div class="hero-cta">
           <a href="projects.html" class="btn btn-hero-primary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3z"/><path d="M9 4v13"/><path d="M15 7v13"/></svg>
@@ -312,6 +314,7 @@ img { max-width: 100%; display: block; }
 
   <!-- ═══ WHAT I DO ═══ -->
   <section class="whatido">
+    <div class="whatido-inner">
     <h2>What I Do</h2>
     <div class="whatido-grid">
       <div class="wi-card c-teal">
@@ -339,10 +342,12 @@ img { max-width: 100%; display: block; }
         <a href="projects.html" class="wi-arrow" aria-label="Learn more">&rarr;</a>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- ═══ ABOUT ME ═══ -->
   <section class="about">
+    <div class="about-wrap">
     <h2>About Me</h2>
     <div class="about-inner">
       <div class="about-photo">
@@ -351,7 +356,7 @@ img { max-width: 100%; display: block; }
         </div>
       </div>
       <div class="about-bio">
-        <p>I am a master's student in Geographic Information Science at the University of Tehran, where I also completed my BSc in Surveying and Geospatial Engineering. My research sits at the intersection of <strong>GeoAI</strong>, <strong>spatial optimization</strong>, and <strong>environmental monitoring</strong> using deep learning and geospatial analysis to address real-world problems in disaster response, land cover change, and natural resource management.</p>
+        <p>I am a master's student in Geographic Information Science at the University of Tehran, where I also completed my BSc in Surveying and Geospatial Engineering. My research sits at the intersection of <strong>GeoAI</strong>, <strong>Spatial Optimization</strong>, and <strong>Environmental Monitoring</strong> using deep learning and geospatial analysis to address real-world problems in disaster response, land cover change, and natural resource management.</p>
         <p>Outside of research, I am a creative person who enjoys different forms of art and expression. I draw portraits, love story-driven video games with rich character development and immersive narratives, and enjoy watching movies. I have a curious mind that likes to find connections and patterns among seemingly unrelated things, a habit that, I think, also shapes how I approach geospatial problems.</p>
         <p>I am currently looking for graduate positions where I can pursue my passion for GIScience and GeoAI, learn from and collaborate with researchers and experts in the field, and apply my knowledge and skills to solve real-world problems that make a positive impact. My <a href="cv.html">CV page</a> has more details on my background, and my <a href="projects.html">projects page</a> covers what I have been working on.</p>
         <div class="about-social">
@@ -362,6 +367,7 @@ img { max-width: 100%; display: block; }
           <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg><span>ResearchGate</span></a>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
