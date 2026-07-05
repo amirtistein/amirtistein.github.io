@@ -163,6 +163,32 @@ img { max-width: 100%; display: block; }
 .project-link { font-size:13px; font-weight:500; display:inline-flex; align-items:center; gap:6px; }
 .project-link svg { width:14px; height:14px; }
 
+/* COURSEWORK PROJECTS */
+.course-list { display:flex; flex-direction:column; gap:16px; }
+.course-item { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; transition:border-color .25s, box-shadow .25s; }
+.course-item:hover { border-color:var(--border-hover); box-shadow:0 6px 20px var(--shadow); }
+.course-head { display:flex; align-items:flex-start; gap:16px; padding:20px 22px; cursor:pointer; user-select:none; }
+.course-icon { width:44px; height:44px; border-radius:11px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.course-icon svg { width:22px; height:22px; color:#fff; }
+.course-headtext { flex:1; min-width:0; }
+.course-title { font-size:16px; font-weight:600; color:var(--text); margin-bottom:4px; line-height:1.3; }
+.course-meta { font-size:12px; color:var(--text-muted); display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; }
+.course-meta .course-tools { color:var(--teal); font-weight:500; }
+.course-meta .course-date { display:inline-flex; align-items:center; gap:5px; }
+.course-meta .course-date svg { width:12px; height:12px; }
+.course-chevron { flex-shrink:0; color:var(--text-muted); transition:transform .3s; margin-top:4px; }
+.course-chevron svg { width:20px; height:20px; display:block; }
+.course-item.open .course-chevron { transform:rotate(180deg); }
+.course-body { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+.course-item.open .course-body { max-height:600px; }
+.course-body-inner { padding:0 22px 22px 82px; }
+.course-body ul { list-style:none; margin:0; padding:0; }
+.course-body li { position:relative; padding:7px 0 7px 20px; font-size:13.5px; line-height:1.6; color:var(--text-secondary); border-top:1px solid var(--border); }
+.course-body li:first-child { border-top:none; padding-top:14px; }
+.course-body li::before { content:''; position:absolute; left:2px; top:14px; width:6px; height:6px; border-radius:50%; background:var(--wi-accent, var(--teal)); }
+.course-body li:first-child::before { top:21px; }
+@media(max-width:600px){ .course-body-inner { padding:0 22px 22px 22px; } }
+
 /* PUBLICATIONS */
 .pub-group { margin-bottom:36px; }
 .pub-group h3 { font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:.5px; color:var(--teal); margin-bottom:16px; }
@@ -269,7 +295,133 @@ img { max-width: 100%; display: block; }
       </div>
     </div>
   </div>
+
+  <div class="section">
+    <h2 class="section-title">Course projects</h2>
+    <div class="course-list">
+
+      <div class="course-item">
+        <div class="course-head">
+          <div class="course-icon" style="background:linear-gradient(135deg,#0f6e56,#1d9e75)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 00-4 4 4 4 0 00-2 7 4 4 0 003 6 4 4 0 006 0 4 4 0 003-6 4 4 0 00-2-7 4 4 0 00-4-4z"/><path d="M12 6v12"/></svg></div>
+          <div class="course-headtext">
+            <div class="course-title">Geospatial Machine Learning</div>
+            <div class="course-meta"><span class="course-tools">Python</span><span class="course-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Nov 2024 – Jul 2025</span></div>
+          </div>
+          <span class="course-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="course-body"><div class="course-body-inner"><ul>
+          <li>Implemented a K-Nearest Neighbour regression model to estimate the spatial distribution of air pollution, using proximity-weighted interpolation to predict pollutant concentrations across unsampled locations from station measurements.</li>
+          <li>Applied fuzzy logic to GIS-based spatial analysis to model and propagate uncertainty in geospatial decision-making.</li>
+          <li>Applied Recurrent Neural Networks (RNNs) to model hydrological time-series data and forecast flood occurrence using rainfall and river flow records.</li>
+        </ul></div></div>
+      </div>
+
+      <div class="course-item">
+        <div class="course-head">
+          <div class="course-icon" style="background:linear-gradient(135deg,#185fa5,#3b9eff)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 15a4 4 0 004 4h9a5 5 0 00.5-9.98A7 7 0 004 12"/><path d="M12 12v6M9 15l3 3 3-3"/></svg></div>
+          <div class="course-headtext">
+            <div class="course-title">Flood Risk Assessment</div>
+            <div class="course-meta"><span class="course-tools">QGIS · Python · EasyFit · SPSS · Excel</span><span class="course-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Apr 2025</span></div>
+          </div>
+          <span class="course-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="course-body"><div class="course-body-inner"><ul>
+          <li>Developed a flood hazard assessment model for Mobile County using GIS and remote sensing data, focusing on flood-prone area detection.</li>
+          <li>Processed Landsat 8 imagery and DEM data in QGIS to create a flood risk index based on elevation and land cover.</li>
+          <li>Analyzed a 50-year flood discharge dataset using the Kolmogorov-Smirnov test to assess normality and identified the best-fitting probability distribution using EasyFit.</li>
+          <li>Conducted a Regional Flood Frequency Analysis (RFFA) with a regression model relating 50-year flood discharge to watershed characteristics, evaluating performance using statistical metrics.</li>
+        </ul></div></div>
+      </div>
+
+      <div class="course-item">
+        <div class="course-head">
+          <div class="course-icon" style="background:linear-gradient(135deg,#0a7d5a,#2ec4a0)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12a10 10 0 0020 0 10 10 0 00-20 0z"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
+          <div class="course-headtext">
+            <div class="course-title">Remote Sensing</div>
+            <div class="course-meta"><span class="course-tools">Python · Google Earth Engine · QGIS · ENVI</span><span class="course-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Nov 2021 – Aug 2022</span></div>
+          </div>
+          <span class="course-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="course-body"><div class="course-body-inner"><ul>
+          <li>Mapped multi-temporal coastline dynamics using Landsat 8 imagery in Google Earth Engine, extracting shoreline positions across epochs to quantify erosion and accretion patterns.</li>
+          <li>Monitored seasonal water level fluctuations at Latyan Dam, Iran, using multi-sensor fusion of Sentinel-1 SAR and Landsat 8 optical imagery.</li>
+          <li>Computed and compared vegetation and water indices (NDVI, MNDWI, NDWI) across multi-temporal Sentinel-2 imagery to assess seasonal land cover variability.</li>
+          <li>Performed land cover change detection using Sentinel-2 optical and SAR data classified by a Random Forest algorithm.</li>
+        </ul></div></div>
+      </div>
+
+      <div class="course-item">
+        <div class="course-head">
+          <div class="course-icon" style="background:linear-gradient(135deg,#534ab7,#8b7fea)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div class="course-headtext">
+            <div class="course-title">Geovisualization</div>
+            <div class="course-meta"><span class="course-tools">HTML/CSS · JavaScript · Cesium · CityGML · ArcGIS Pro · GeoServer</span><span class="course-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Oct 2024 – Jul 2025</span></div>
+          </div>
+          <span class="course-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="course-body"><div class="course-body-inner"><ul>
+          <li>Developed a 3D model of an urban area using CityGML, representing buildings, roads, and other infrastructure.</li>
+          <li>Built a web-based 3D spatial visualization platform by converting CityGML to 3D Tiles using FME and integrating it with CesiumJS for interactive geospatial exploration.</li>
+          <li>Built a Web-based Augmented Reality (WebAR) application to overlay geospatial information on real-world landmarks.</li>
+          <li>Implemented a Web GIS project to visualize and analyze geospatial datasets interactively using PostGIS and Leaflet.</li>
+          <li>Developed a real-time AVL system using Django and Android (Java) to track user locations, visualize movement, export routes to GIS formats, and trigger geofence-based alerts.</li>
+        </ul></div></div>
+      </div>
+
+      <div class="course-item">
+        <div class="course-head">
+          <div class="course-icon" style="background:linear-gradient(135deg,#854f0b,#ba7517)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20l-5.5-3V4L9 7m0 13l6-3m-6 3V7m6 10l5.5 3V7L15 4m0 13V4m0 0L9 7"/></svg></div>
+          <div class="course-headtext">
+            <div class="course-title">Geoprocessing</div>
+            <div class="course-meta"><span class="course-tools">ArcGIS · Global Mapper</span><span class="course-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Sep 2021 – May 2022</span></div>
+          </div>
+          <span class="course-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="course-body"><div class="course-body-inner"><ul>
+          <li>Executed core geospatial workflows in ArcGIS including georeferencing, mosaic generation, network analysis, geocoding, and multi-criteria site selection across urban and infrastructure mapping scenarios.</li>
+          <li>Processed topographic and LiDAR datasets in Global Mapper to generate Digital Terrain Models (DTMs), extract surface features, and conduct segment-level terrain analysis.</li>
+          <li>Integrated multi-layered spatial datasets (population density, land use, transportation) in ArcGIS to produce a cartographic analysis of Esfarayen, identifying spatial distribution patterns.</li>
+        </ul></div></div>
+      </div>
+
+      <div class="course-item">
+        <div class="course-head">
+          <div class="course-icon" style="background:linear-gradient(135deg,#185fa5,#2ec4a0)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a9 3 0 0018 0 9 3 0 00-18 0z"/><path d="M3 7v5a9 3 0 0018 0V7M3 12v5a9 3 0 0018 0v-5"/></svg></div>
+          <div class="course-headtext">
+            <div class="course-title">Hydrology</div>
+            <div class="course-meta"><span class="course-tools">Python · Google Earth Engine · ArcGIS</span><span class="course-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Nov 2023 – Dec 2023</span></div>
+          </div>
+          <span class="course-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="course-body"><div class="course-body-inner"><ul>
+          <li>Analysed precipitation patterns and constructed storm hyetographs and hydrographs for a watershed, applying cross-sectional flow analysis to characterize rainfall-runoff response and peak discharge behaviour.</li>
+          <li>Integrated satellite-derived hydrological data from Google Earth Engine with ground measurements to improve cumulative precipitation estimates.</li>
+          <li>Developed a GIS-based model to assess flood risk in a river basin, integrating hydrological data, topography, and historical flood records.</li>
+          <li>Delineated watershed boundaries and modelled drainage networks in ArcGIS using DEM-derived flow direction and accumulation layers.</li>
+        </ul></div></div>
+      </div>
+
+      <div class="course-item">
+        <div class="course-head">
+          <div class="course-icon" style="background:linear-gradient(135deg,#0a1628,#185fa5)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12l10 5 10-5M2 12l10-5 10 5M2 12v5l10 5 10-5v-5"/><circle cx="12" cy="9" r="2"/></svg></div>
+          <div class="course-headtext">
+            <div class="course-title">Photogrammetry</div>
+            <div class="course-meta"><span class="course-tools">ContextCapture · Metashape</span><span class="course-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>May 2022 – Jun 2022</span></div>
+          </div>
+          <span class="course-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+        </div>
+        <div class="course-body"><div class="course-body-inner"><ul>
+          <li>Reviewed and synthesized LiDAR data applications across GIS, urban planning, and BIM frameworks, identifying dominant use patterns in point cloud analysis, feature extraction, and 3D urban modelling.</li>
+          <li>Executed a full close-range photogrammetry pipeline for a sculptural subject, from acquisition of 100 calibrated images through dense point cloud generation and mesh reconstruction, producing a photorealistic 3D model.</li>
+          <li>Processed 200+ aerial photogrammetry images in Metashape to generate a dense point cloud and high-resolution 3D terrain model, covering the full pipeline from preprocessing to final export.</li>
+        </ul></div></div>
+      </div>
+
+    </div>
+  </div>
+
   <footer class="footer"><div class="footer-inner"><p>&copy; 2026 Amirhossien Mahmoudnia</p><div class="footer-links"><a href="mailto:amirh.mahmoudnia@gmail.com">amirh.mahmoudnia@gmail.com</a><a href="https://github.com/amirtistein" target="_blank">GitHub</a><a href="https://linkedin.com/in/amir-hosieen-mahmoudnia" target="_blank">LinkedIn</a></div></div></footer>
+
   <script>
 (function(){
   var t=localStorage.getItem('theme');
@@ -301,6 +453,12 @@ document.addEventListener('DOMContentLoaded',function(){
       updateIcon();
     });
   }
+  // Coursework accordion
+  document.querySelectorAll('.course-head').forEach(function(head){
+    head.addEventListener('click',function(){
+      head.parentElement.classList.toggle('open');
+    });
+  });
 });
 </script>
 </body>
